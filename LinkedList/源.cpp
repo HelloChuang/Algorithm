@@ -3,64 +3,67 @@
 
 struct node
 {
-	int num;
+	int id;
 	struct node * nextPtr;
 };
 
 typedef struct node Node;
 typedef struct node * NodePtr;
-void insert(NodePtr *sPtr,int num);
+void insert(int num);
 void delate(NodePtr *newNode, int num);
 void Print();
-
+NodePtr head = NULL;
 int main(void) {
-	NodePtr startPtr = NULL;
-	int choice=1;
+	
+	int choice;
 	int num;
 	Print();
-
+	scanf_s("\n%d",&choice);
 	while (choice != 0)
 	{
 		switch(choice) {
 			case 1:
 				printf("Please enter a number");
 				scanf_s("\n%d",&num);
-				insert(&startPtr,num);
+				insert(num);
+				Print();
 				break;
 			case 2:
 				printf("to do");
 		}
 	}
+	Print();
 }
 
-void insert(NodePtr * sPtr,int num) {
-	NodePtr newPtr;/*指向一个新的节点*/
-	NodePtr previousPtr;/*指向链表中前一个节点的指针*/
-	NodePtr currentPtr;/*指向链表中当前节点的指针*/
+void insert(int num) {
+	/*指向一个新的节点*/
+	node  *follow;/*指向链表中前一个节点的指针*/
+	node  *p;/*指向链表中当前节点的指针*/
 
-	newPtr = (Node*)malloc(sizeof(Node));
+	NodePtr newPtr = (Node*)malloc(sizeof(Node));
 
 	if (newPtr != NULL)
 	{
-		newPtr->num = num;
+		newPtr->id = num;
 		newPtr->nextPtr = NULL;
 
-		previousPtr = NULL;
-		currentPtr = *sPtr;
+		follow = NULL;
+		p = head;
 
-		while (currentPtr != NULL && num > currentPtr->num)
+		while (p != NULL && num > p->id)
 		{
-			previousPtr = currentPtr;
-			currentPtr = currentPtr->nextPtr;
+			follow = p;
+			p = p->nextPtr;
 		}
-		if (previousPtr ==NULL)
+		if (follow ==NULL)
 		{
-			newPtr->nextPtr = *sPtr;
-			*sPtr = newPtr;
+			newPtr->nextPtr = head;
+			head = newPtr;
 		}
 		else
 		{
-			previousPtr->nextPtr = *sPtr;
+			follow->nextPtr = newPtr;
+			newPtr->nextPtr = p;
 
 		}
 	}
@@ -68,5 +71,10 @@ void insert(NodePtr * sPtr,int num) {
 }
 void Print()
 {
-	printf("萱萱我爱你");
+	node *p = head;
+	while (p)
+	{
+		printf("%d ",p->id);
+		p = p->nextPtr;
+	}
 }

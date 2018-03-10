@@ -34,7 +34,24 @@ void Modify(int num,int newNum)
 
 	}
 }
+int  Delete(int num)
+{
+	node *p = g_pHead,*p1=NULL;
+	while (p)
+	{
+		if (p->num==num)
+		{
+			p1->next = p->next;
+			free(p);
+			return 1;
+		}
+		p1 = p;
+		p = p->next;
 
+	}
+	return  0;
+	printf("\n");
+}
 void Print()
 {
 	node *p = g_pHead;
@@ -46,17 +63,33 @@ void Print()
 	}
 	printf("\n");
 }
+int  change()
+{
+	node *p = g_pHead;
+	p->next = p->next->next;
 
+	return  p->num;
+}
 int main()
 {
 	insert(1);
 	insert(2);
+	insert(3);
 	printf("ordinarary\n");
 	Print();
 	Modify(2, 200);
 	printf("new\n");
 	Print();
+	Delete(1);
+	Print();
 
+	printf("%d\n",change());
+	Print();
+	insert(3);
+	insert(2);
+	insert(1);
+
+	Print();
 	system("pause");
 }
 
