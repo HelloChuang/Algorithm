@@ -1,21 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pocker", "Vercation Prictices\Vercation Prictices.vcxproj", "{09B48711-1B70-4059-AD43-D8B8D518A6A6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedList", "LinkedList\LinkedList.vcxproj", "{D81B1842-7698-4E74-8821-34CA7191D459}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "List-InsertSort", "LinkedList\LinkedList.vcxproj", "{D81B1842-7698-4E74-8821-34CA7191D459}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "List2", "List2\List2.vcxproj", "{FC1C9661-3D44-4FEA-B680-F06300315298}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "linkedlist-2", "linkedlist-2\linkedlist-2.vcxproj", "{B88CC2B3-9D52-4335-85AB-B3F5849AF174}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "List-I-D-P-F", "linkedlist-2\linkedlist-2.vcxproj", "{B88CC2B3-9D52-4335-85AB-B3F5849AF174}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "doubleList", "doubleList\doubleList.vcxproj", "{3857E7C2-6645-4480-89F3-F482055FFA2E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "List-sort", "doubleList\doubleList.vcxproj", "{3857E7C2-6645-4480-89F3-F482055FFA2E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "引用作为函数的返回值", "引用作为函数的返回值\引用作为函数的返回值.vcxproj", "{2A5110B9-BC67-4B63-83BB-E5B8D857A303}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qsort", "qsort\qsort.vcxproj", "{FF7C23BE-1A57-4716-AC9D-5218562A6A27}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qsort(函数指针)", "qsort\qsort.vcxproj", "{FF7C23BE-1A57-4716-AC9D-5218562A6A27}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PrintListFromTailToHead", "PrintListFromTailToHead\PrintListFromTailToHead.vcxproj", "{F2853132-5D9F-45E6-8A33-CE77AB84A21D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,14 @@ Global
 		{FF7C23BE-1A57-4716-AC9D-5218562A6A27}.Release|x64.Build.0 = Release|x64
 		{FF7C23BE-1A57-4716-AC9D-5218562A6A27}.Release|x86.ActiveCfg = Release|Win32
 		{FF7C23BE-1A57-4716-AC9D-5218562A6A27}.Release|x86.Build.0 = Release|Win32
+		{F2853132-5D9F-45E6-8A33-CE77AB84A21D}.Debug|x64.ActiveCfg = Debug|x64
+		{F2853132-5D9F-45E6-8A33-CE77AB84A21D}.Debug|x64.Build.0 = Debug|x64
+		{F2853132-5D9F-45E6-8A33-CE77AB84A21D}.Debug|x86.ActiveCfg = Debug|Win32
+		{F2853132-5D9F-45E6-8A33-CE77AB84A21D}.Debug|x86.Build.0 = Debug|Win32
+		{F2853132-5D9F-45E6-8A33-CE77AB84A21D}.Release|x64.ActiveCfg = Release|x64
+		{F2853132-5D9F-45E6-8A33-CE77AB84A21D}.Release|x64.Build.0 = Release|x64
+		{F2853132-5D9F-45E6-8A33-CE77AB84A21D}.Release|x86.ActiveCfg = Release|Win32
+		{F2853132-5D9F-45E6-8A33-CE77AB84A21D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
